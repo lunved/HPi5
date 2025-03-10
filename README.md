@@ -221,7 +221,7 @@ But [These instructions - GitHub - SatDump/SatDump: A generic satellite data pro
 I manually went through [these instructions](https://www.instructables.com/Building-SDR-From-Source-Code-on-a-Raspberry-PI-4-/) with some subtle changes.
 
 The changes I had to make were:
-- Replaced libvolk2-dev with libvolk-dev
+- Replaced libvolk2-dev with libvolk-dev when installing the dependencies
 - ran the cmake from the SDRPlusPlus directory and no from inside build or CMakeFiles
 
 ```
