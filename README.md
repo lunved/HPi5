@@ -18,7 +18,7 @@ This is the hardware I used:
 
 
 ## Summary
-1. Check RPi5 EProm settings and change EProm to enable boot from SSD
+[1.](https://github.com/lunved/HPi5/blob/main/README.md#1-check-rpi5-eprom-settings) Check RPi5 EProm settings and change EProm to enable boot from SSD
 2. Install NVMe Hat and SSD
 3. Install Kali onto SSD and Configure it on the PC before installing in RPi5
 4. Boot Kali and some next steps
