@@ -213,7 +213,10 @@ Listening to 20m CW video coming soon.
 But [These instructions - GitHub - SatDump/SatDump: A generic satellite data processing software.](https://github.com/SatDump/SatDump#linux) on how to include the dependencies and how to build the application worked flawlessly for me.
 
 
-## 7. SDR++
+## 8. SDR++
+
+<video src="https://github.com/lunved/HPi5/blob/main/images/SDR%20FM%20Stations.mp4" width="320" height="240" controls></video>
+
 I manually went through [these instructions](https://www.instructables.com/Building-SDR-From-Source-Code-on-a-Raspberry-PI-4-/) with some subtle changes.
 
 The changes I had to make were:
