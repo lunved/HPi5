@@ -19,16 +19,17 @@ This is the hardware I used:
 
 ## Summary
 1. Check RPi5 EProm settings and change EProm to enable boot from SSD
-2. Install Kali onto SSD and Configure it on the PC before installing in RPi5
-3. Boot Kali and some next steps
+2. Install NVMe Hat and SSD
+3. Install Kali onto SSD and Configure it on the PC before installing in RPi5
+4. Boot Kali and some next steps
 	1. Connect to Wifi - Nothing to do here I just make sure I can connect to my network at home.
 	2. Update and Upgrade Kali
 	3. Autostart Bluetooth services
 	4. Increase Swap size
-4. Auto-connect Bluetooth Speakers
-5. Add SDR
-6. SatDump
-7. SDR++
+5. Auto-connect Bluetooth Speakers
+6. Add SDR
+7. SatDump
+8. SDR++
 
 
 ## 1. Check RPi5 EProm Settings
@@ -74,8 +75,12 @@ It should liike this:
 6. Save your changes (Ctrl-O) and exit (Ctrl-X)
 7. Reboot
 
+## 2. Install Hat and SSD into HPi5
+This is what mine looks like
+<img src="../images/NVMe hat and SSD.jpg" width="750">
 
-## 2. Install Kali onto SSD	
+
+## 3. Install Kali onto SSD	
 1. Put SSD into NVMe to USB adapter and using Raspverry Pi Imager write Kali to the device
 
 2. When I completed writing and verifying the image I had to remove the USB device and reisert it.  After that I can edit the config.txt file
@@ -89,7 +94,7 @@ dtoverlay=vc4-kms-dpi-hyperpixel4sq
 #dtoverlay=vc4-fkms-v3d
 ```
 
-## 3. Boot Kali and next steps
+## 4. Boot Kali and next steps
 Once I have booted into kali I do the following:
 1. Connect to wifi - Nothing to do here I just make sure I can connect to my network at home.
 2. Update and Upgrade
@@ -126,7 +131,7 @@ You can also run `free -m` to see your devices memory and swap.
 
 
 
-## 4. AutoConnect Bluetooth speakers
+## 5. AutoConnect Bluetooth speakers
 To do this you need a script that will run everytime the system boots.  This is what I did.
 
 First I had to find out the MAC address of my speakers (headset).  To do this I simply clicked on the Bluetooth icon in the top right hand corner of the screen.  That opens up a Bluetooth Devices application and the only device I had there was something called `XWF-M18-M28-M38` - The headset.  Underneath that you will see the mac address displayed (E.g. 3x:xx:xx:xx:xx:x2).
@@ -156,7 +161,7 @@ crontab -e
 Now reboot and wait - you can login but you do not have to.  You will hear the Bluetooth speakers connecting after 30 seconds.
 
 
-## 5. Add SDR
+## 6. Add SDR
 
 I found [this link - A newbie’s guide to Software Defined Radios on Kali Linux | Part 1: Fun with FM radios](https://medium.com/poka-techblog/a-newbies-guide-to-software-defined-radios-on-kali-linux-part-1-fun-with-fm-radios-3a3589b78608) really helpful
 
@@ -196,7 +201,7 @@ I also found out that you **DON'T START GQRX AS SUDO**.  After that `gqrx` start
 
 Listening to 20m CW video coming soon.
 
-## 6. SatDump compiling
+## 7. SatDump compiling
 
 **NOTE:** I have not tested SatDump yet as I still have to build the antenna.
 
