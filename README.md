@@ -78,7 +78,7 @@ It should liike this:
 ## 2. Install Hat and SSD into HPi5
 This is what mine looks like
 
-<img src="https://github.com/lunved/HPi5/blob/main/images/NVMe%20hat%20and%20SSD.jpg" width="750">
+<img src="https://github.com/lunved/HPi5/blob/main/images/NVMe%20hat%20and%20SSD.jpg" width="500">
 
 
 ## 3. Install Kali onto SSD	
@@ -163,6 +163,10 @@ Now reboot and wait - you can login but you do not have to.  You will hear the B
 
 
 ## 6. Add SDR
+
+These are the SDR dongles I have tested with and currently use.
+
+<img src="https://github.com/lunved/HPi5/blob/main/images/SDR%20Dongles.jpg" width="500">
 
 I found [this link - A newbie’s guide to Software Defined Radios on Kali Linux | Part 1: Fun with FM radios](https://medium.com/poka-techblog/a-newbies-guide-to-software-defined-radios-on-kali-linux-part-1-fun-with-fm-radios-3a3589b78608) really helpful
 
