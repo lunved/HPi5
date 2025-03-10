@@ -77,7 +77,8 @@ It should liike this:
 
 ## 2. Install Hat and SSD into HPi5
 This is what mine looks like
-<img src="../images/NVMe hat and SSD.jpg" width="750">
+
+<img src="https://github.com/lunved/HPi5/blob/main/images/NVMe%20hat%20and%20SSD.jpg" width="750">
 
 
 ## 3. Install Kali onto SSD	
