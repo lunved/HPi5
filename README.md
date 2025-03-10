@@ -33,21 +33,15 @@ This is the hardware I used:
 
 ## 1. Check RPi5 EProm Settings
 1. Using the Raspberry Pi Imager install Raspberry PI OS (64Bit) onto a 32Gb SD card.  
-2. If you are using this on the HackberryPi5 then remember to add the line to the /boot/config.txt file on your SD card.
+2. If you are using this on the HackberryPi5 then remember to add ONLY the following line to the /boot/config.txt file on your SD card.
 ```
 dtoverlay=vc4-kms-dpi-hyperpixel4sq
 ```
 3. Next follow the steps from [here](https://community.volumio.com/t/guide-prepare-raspberry-pi-for-boot-from-usb-nvme/65700). The next steps are a summary of what I did.
 
-  
-
  - 3.1 Boot from the SD Card into Raspberry Pi OS
   
-  - 3.2 Checked EEProm version
-    
-```
-vcgencmd bootloader_version
-```
+  - 3.2 Checked EEProm version `vcgencmd bootloader_version`
 
   - 3.3 Edit this file /etc/default/rpi-eeprom-update
     
@@ -59,14 +53,10 @@ sudo nano /etc/default/rpi-eeprom-update
 	- to - 
 		FIRMWARE_RELEASE_STATUS="latest" 
 
-  - 3.4 Ran sudo rpi-eeprom-update -a
+  - 3.4 Run `sudo rpi-eeprom-update -a`
     - Reboot
 
-4. Check Boot order
-
-```
-sudo rpi-eeprom-config
-```
+4. Check Boot order by running this `sudo rpi-eeprom-config`
 	
 - Mine already had a boot order of 
 `
@@ -84,39 +74,57 @@ It should liike this:
 6. Save your changes (Ctrl-O) and exit (Ctrl-X)
 7. Reboot
 
+
 ## 2. Install Kali onto SSD	
 1. Put SSD into NVMe to USB adapter and using Raspverry Pi Imager write Kali to the device
 
-2. When I have completed writing and verifying the image I have to remove the USB device and reisert it.  After that I can edit the config.txt file
+2. When I completed writing and verifying the image I had to remove the USB device and reisert it.  After that I can edit the config.txt file
 
 3. Remember to add the line to the `config.txt` file on your SD card.
 ```
 dtoverlay=vc4-kms-dpi-hyperpixel4sq
 ```
-and remove the other dtoverlay lines.  (If you do not remove the other lines the console will work but NOT the GUI) I just comment them out like bellow wherever I find them:
+4. Remove the other dtoverlay lines.  (If you do not remove the other lines the console will work but NOT the GUI) I just comment them out like bellow wherever I find them:
 ```
 #dtoverlay=vc4-fkms-v3d
 ```
 
 ## 3. Boot Kali and next steps
 Once I have booted into kali I do the following:
-1. Connect to wifi
+1. Connect to wifi - Nothing to do here I just make sure I can connect to my network at home.
 2. Update and Upgrade
 ```
-sudo apt update
+sudo apt update && sudo apt -y upgrade
 ```
 If you get an error with something like Error "release file is not yet valid" you need to [set your timezone](https://linuxconfig.org/how-to-set-time-on-kali-linux) correctly.
 
-3. I then make sure the bluetooth autostarts. Open a Console and type the following
-```
-sudo systemctl enable bluetooth
-sudo systemctl start bluetooth
-```
-Open Settings -> Bluetooth Manager and search for your Bluetooth speakers (The onboard ones)  Mine are XWF-M18-M28-M38
+3. I then make sure the bluetooth autostarts. Open a terminal and type the following `sudo systemctl enable bluetooth` and then `sudo systemctl start bluetooth`
+4. Open Settings -> Bluetooth Manager and search for your Bluetooth speakers (The onboard ones)  Mine are `XWF-M18-M28-M38`. You can then "Pair", "Trust" and "Connect" the bluetooth speakers.  If this works you should see your speakers connect in the top right hand corner.
 
-You can then "Pair", "Trust" and "Connect" the bluetooth speakers
+4. Increase Swapsize I could not find the `dphys-swapfile` command so I had to install it.  Instructions were found [here](https://kalitut.com/raspberry-pi-swapping/)
+```
+sudo apt-get install dphys-swapfile
+```
+Check the file /etc/dphys-swapfile and change the CONF_MAXSWAP to a size that suits you.  I made mine 4096.  If that file does not exist run the following:
+```
+sudo dphys-swapfile setup
+```
+after you have edited the file you can enable the service to have it autostart using this command:
+```
+sudo systemctl enable dphys-swapfile
+```
+and then start the service with this command 
+```
+sudo systemctl start dphys-swapfile
+```
 
-4. Increase Swapsize
+If you want to check if the swap file is running you can simply run:
+```
+swapon -s
+```
+You can also run `free -m` to see your devices memory and swap.
+
+
 
 ## 4. AutoConnect Bluetooth speakers
 To do this you need a script that will run everytime the system boots.  This is what I did.
@@ -147,28 +155,6 @@ crontab -e
 
 Now reboot and wait - you can login but you do not have to.  You will hear the Bluetooth speakers connecting after 30 seconds.
 
-4. Increase Swapfile size
-I could not find the dphys-swapfile command so I had to install it.  Instructions were found [here](https://kalitut.com/raspberry-pi-swapping/)
-```
-sudo apt-get install dphys-swapfile
-```
-Check the file /etc/dphys-swapfile and change the CONF_MAXSWAP tp a size that suits you.  I made mine 4096.  If that file does not exist run the following:
-```
-sudo dphys-swapfile setup
-```
-after you have edited the file you can enable the service like this:
-```
-sudo systemctl enable dphys-swapfile
-```
-and then start the service like this:
-```
-sudo systemctl start dphys-swapfile
-```
-If you want to check if the swap file is running you can simply run:
-```
-swapon -s
-```
-You can also run `free -m` to see your devices memory and swap.
 
 ## 5. Add SDR
 
