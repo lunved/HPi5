@@ -130,7 +130,7 @@ swapon -s
 ```
 You can also run `free -m` to see your devices memory and swap.
 
-6. If you have renamed your host from kali to something else you will be getting a message "sudo: Unabvle to resolve hostname or ???" (I don;t remember the exact error). To resolve this issues make sure that `/etc/hostname` and `/etc/hosts` both refer to your new name.  in `/etc/hosts` make sure that the line for `127.0.0.1` refers to your new machine name.
+6. If you have renamed your host from kali to something else you will be getting a message "sudo: Unabvle to resolve host or ???" (I don't remember the exact error). To resolve this issues make sure that `/etc/hostname` and `/etc/hosts` both refer to your new name.  in `/etc/hosts` make sure that the line for `127.0.0.1` refers to your new machine name.  There are more details [here](https://askubuntu.com/questions/811098/when-i-run-a-sudo-command-it-says-unable-to-resolve-host)
 
 
 ## 5. AutoConnect Bluetooth speakers
