@@ -217,6 +217,12 @@ But [These instructions - GitHub - SatDump/SatDump: A generic satellite data pro
 
 ![Video of SDR++ selecting FM Radio Stations](https://raw.githubusercontent.com/lunved/HPi5/main/images/SDR%20FM%20Stations.mp4)
 
+
+
+https://github.com/user-attachments/assets/4b4a2213-e487-4a63-b6a7-ec29403c03c6
+
+
+
 I manually went through [these instructions](https://www.instructables.com/Building-SDR-From-Source-Code-on-a-Raspberry-PI-4-/) with some subtle changes.
 
 The changes I had to make were:
