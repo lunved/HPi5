@@ -30,6 +30,7 @@ This is the hardware I used:
 6. Add SDR
 7. SatDump
 8. SDR++
+9. ADS-B - Track planes etc.
 
 
 ## 1. Check RPi5 EProm Settings
@@ -261,7 +262,9 @@ And Voila!!! I now have SDR++ running on Kali onm a Hackberry Pi5.  To start it 
 sdrpp
 ```
 
+## 9. ADS-B - Plane tracking
 ---
+I am busy following [these instructions here](https://area-51.blog/2019/10/15/getting-up-an-ads-b-receiver-on-a-raspberry-pi/)
 
 # TODO:
 
