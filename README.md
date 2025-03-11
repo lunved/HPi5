@@ -82,7 +82,7 @@ This is what mine looks like
 
 
 ## 3. Install Kali onto SSD	
-1. Put SSD into NVMe to USB adapter and using Raspverry Pi Imager write Kali to the device
+1. Put SSD into NVMe to USB adapter and using Raspverry Pi Imager write [Kali](https://www.kali.org/get-kali/#kali-arm) to the device
 
 2. When I completed writing and verifying the image I had to remove the USB device and reisert it.  After that I can edit the config.txt file
 
