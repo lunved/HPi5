@@ -107,7 +107,7 @@ If you get an error with something like Error "release file is not yet valid" yo
 3. I then make sure the bluetooth autostarts. Open a terminal and type the following `sudo systemctl enable bluetooth` and then `sudo systemctl start bluetooth`
 4. Open Settings -> Bluetooth Manager and search for your Bluetooth speakers (The onboard ones)  Mine are `XWF-M18-M28-M38`. You can then "Pair", "Trust" and "Connect" the bluetooth speakers.  If this works you should see your speakers connect in the top right hand corner.
 
-4. Increase Swapsize I could not find the `dphys-swapfile` command so I had to install it.  Instructions were found [here](https://kalitut.com/raspberry-pi-swapping/)
+5. Increase Swapsize I could not find the `dphys-swapfile` command so I had to install it.  Instructions were found [here](https://kalitut.com/raspberry-pi-swapping/)
 ```
 sudo apt-get install dphys-swapfile
 ```
@@ -130,6 +130,7 @@ swapon -s
 ```
 You can also run `free -m` to see your devices memory and swap.
 
+6. If you have renamed your host from kali to something else you will be getting a message "sudo: Unabvle to resolve hostname or ???" (I don;t remember the exact error). To resolve this issues make sure that `/etc/hostname` and `/etc/hosts` both refer to your new name.  in `/etc/hosts` make sure that the line for `127.0.0.1` refers to your new machine name.
 
 
 ## 5. AutoConnect Bluetooth speakers
