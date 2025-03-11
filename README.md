@@ -206,12 +206,11 @@ I also found out that you **DON'T START GQRX AS SUDO**.  After that `gqrx` start
 
 Listening to 40m CW and Audio video - Please ignore the crapy sound I have a temp antenna installed just for this test.
 
-<video src="https://github.com/user-attachments/assets/c49a7e36-ca52-4a82-aca5-ca23c1a23c1a" controls="controls" style="max-width: 730px;">
+<video src="https://github.com/user-attachments/assets/c49a7e36-ca52-4a82-aca5-ca23c1a23c1a" controls="controls" style="max-width: 500px;">
 </video>
 
-https://github.com/user-attachments/assets/c49a7e36-ca52-4a82-aca5-ca23c1a23c1a
-
-https://github.com/user-attachments/assets/ce848c22-ff3c-4b6b-aca8-ebd9369e7ced
+<video src="https://github.com/user-attachments/assets/ce848c22-ff3c-4b6b-aca8-ebd9369e7ced" controls="controls" style="max-width: 500px;">
+</video>
 
 
 
