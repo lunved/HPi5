@@ -204,7 +204,13 @@ I also found out that you **DON'T START GQRX AS SUDO**.  After that `gqrx` start
 
 **NOTE:** My` nooelec nesdr Smart` does not go below 24.000 kHz ... However I unplugged  it and inserted my RTL-SDR BLOG v4 into the usb and it worked without any problems ... I can even tune down to the Lower Ham bands and pick up 40m with the correct antenna.
 
-Listening to 20m CW video coming soon.
+Listening to 40m CW and Audio video.
+
+https://github.com/user-attachments/assets/c49a7e36-ca52-4a82-aca5-ca23c1a23c1a
+
+https://github.com/user-attachments/assets/ce848c22-ff3c-4b6b-aca8-ebd9369e7ced
+
+
 
 ## 7. SatDump compiling
 
@@ -215,13 +221,9 @@ But [These instructions - GitHub - SatDump/SatDump: A generic satellite data pro
 
 ## 8. SDR++
 
-![Video of SDR++ selecting FM Radio Stations](https://raw.githubusercontent.com/lunved/HPi5/main/images/SDR%20FM%20Stations.mp4)
-
-
+A video of SDR++ selecting and playing some FM radio stations.
 
 https://github.com/user-attachments/assets/4b4a2213-e487-4a63-b6a7-ec29403c03c6
-
-
 
 I manually went through [these instructions](https://www.instructables.com/Building-SDR-From-Source-Code-on-a-Raspberry-PI-4-/) with some subtle changes.
 
