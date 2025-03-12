@@ -172,7 +172,7 @@ These are the SDR dongles I have tested with and currently use.
 
 I found [this link - A newbie’s guide to Software Defined Radios on Kali Linux | Part 1: Fun with FM radios](https://medium.com/poka-techblog/a-newbies-guide-to-software-defined-radios-on-kali-linux-part-1-fun-with-fm-radios-3a3589b78608) really helpful
 
-Everything up to the Tuning to an FM Station worked perfectly.
+Everything from the previous link, up to the Tuning to an FM Station, worked perfectly.
 
 However when I tried to install `gqrx` I started getting errors.
 
