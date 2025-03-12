@@ -190,7 +190,7 @@ sudo apt purge dkms
 
 Then when I ran 
 ```
-udo apt install gqrx-sdr
+sudo apt install gqrx-sdr
 ```
 the install completed successfully.
 
